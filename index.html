@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="index.css" />
+        <title>Vorlesungen</title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-content">
+
+                <h1 class="no-margin">Web-Development 1</h1>
+                <button id="scrollUp" onclick="scrollToSection('kapitel')">
+                    <img src="icons/angles-up-solid.svg" alt="scroll to top" />
+                </button>
+            </div>
+            <progress id="scoll-progress" value="0" max="100"></progress>
+        </nav>
+        <main id="main">
+            <section id="kapitel">
+                <h1 class="no-margin">Kapitel</h1>
+                <div>
+                    <ul class="list-unstyled list-grid" id="chapters">
+                        <li>
+                            <button onclick="scrollToSection('vl1')">
+                                <h2>Vorlesung 1</h2>
+                                <time class="datum">22. März 2022</time>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="scrollToSection('vl2')">
+                                <h2>Vorlesung 2</h2>
+                                <time class="datum">29. März 2022</time>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="vl1">
+                <h1 class="no-margin">Vorlesung 1 <time class="datum">22. März 2022</time></h1>
+                <h3>Standbeine des WWW</h3>
+                <ul>
+                    <li>
+                        Einheitliches Schema für das Auffinden von Ressourcen
+                        (URL/Hyperlink)
+                    </li>
+                    <li>Protokolle, um auf diese Ressourcen zuzugreifen</li>
+                    <li>
+                        Hypertext, um einfach zwischen Ressourcen zu navigieren
+                        (z.B. HTML)
+                    </li>
+                </ul>
+                <h3><abbr title="What You See Is What You Get">WYSIWYG</abbr>-Editoren</h3>
+                <p>integrieren neben der Möglichkeit, den Quelltext direkt zu editieren, eine graphische Ausgabe/Editor.</p>
+            </section>
+
+            <section id="vl2">
+                <h1 class="no-margin">Vorlesung 2 <time class="datum">29. März 2022</time></h1>
+            </section>
+        </main>
+        <footer>
+            <a href="https://github.com/riedadr/web-dev" target="_blank" rel="noreferrer"><img src="icons/github-brands.svg" alt="github"></a>
+            <a href="mailto:adrian.riedel@hof-university.de">Adrian Riedel</a>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>
