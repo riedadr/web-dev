@@ -196,9 +196,30 @@ footer img {
     margin: 0;
 }
 
+
+.blue {
+    color: var(--blue);
+}
+.green {
+    color: var(--green);
+}
+.yellow {
+    color: var(--yellow);
+}
+.orange {
+    color: var(--orange);
+}
+.red {
+    color: var(--red);
+}
+.violett {
+    color: var(--violett);
+}
+
 button {
     cursor: pointer;
 }
+
 
 @media screen and (max-width: 600px) {
     section {
