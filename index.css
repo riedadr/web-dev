@@ -48,7 +48,7 @@ body {
     
 }
 
-nav {
+header {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -63,7 +63,7 @@ nav {
     background-color: var(--fg);
 }
 
-nav button {
+header button {
     padding: 0.5rem;
     width: 2rem;
 
@@ -76,7 +76,7 @@ nav button {
     color: #fff;
 }
 
-nav progress[value] {
+header progress[value] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -89,10 +89,10 @@ nav progress[value] {
     height: 0.25rem;
 }
 
-nav progress[value]::-webkit-progress-bar {
+header progress[value]::-webkit-progress-bar {
     background-color: var(--fg);
 }
-nav progress[value]::-webkit-progress-value {
+header progress[value]::-webkit-progress-value {
     background: var(--blue);
     background: -moz-linear-gradient(45deg, var(--blue) 0%, var(--green) 100%);
     background: -webkit-linear-gradient(
@@ -102,7 +102,7 @@ nav progress[value]::-webkit-progress-value {
     );
     background: linear-gradient(45deg, var(--blue) 0%, var(--green) 100%);
 }
-nav progress[value]::-moz-progress-bar {
+header progress[value]::-moz-progress-bar {
     background: var(--blue);
     background: linear-gradient(45deg, var(--blue) 0%, var(--green) 100%);
 }
@@ -218,6 +218,10 @@ footer img {
 
 button {
     cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
 }
 
 

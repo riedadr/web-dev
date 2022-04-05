@@ -9,16 +9,15 @@
         <title>Vorlesungen</title>
     </head>
     <body>
-        <nav>
+        <header>
             <div class="nav-content">
-
                 <h1 class="no-margin">Web-Development 1</h1>
                 <button id="scrollUp" onclick="scrollToSection('kapitel')">
                     <img src="icons/angles-up-solid.svg" alt="scroll to top" />
                 </button>
             </div>
             <progress id="scoll-progress" value="0" max="100"></progress>
-        </nav>
+        </header>
         <main id="main">
             <section id="kapitel">
                 <h1 class="no-margin">Kapitel</h1>
@@ -27,13 +26,17 @@
                         <li>
                             <button onclick="scrollToSection('vl1')">
                                 <h2>Einführung</h2>
-                                <time class="datum">22. März 2022 + 29. März 2022</time>
+                                <time class="datum"
+                                    >22. März 2022 + 29. März 2022</time
+                                >
                             </button>
                         </li>
                         <li>
                             <button onclick="scrollToSection('vl2')">
                                 <h2>Webanwendung</h2>
-                                <time class="datum">29. März 2022</time>
+                                <time class="datum"
+                                    >29. März 2022 + 5. April 2022</time
+                                >
                             </button>
                         </li>
                     </ul>
@@ -41,7 +44,10 @@
             </section>
 
             <section id="vl1">
-                <h1 class="no-margin">Einführung <time class="datum">22. März 2022 + 29. März 2022</time></h1>
+                <h1 class="no-margin">
+                    Einführung
+                    <time class="datum">22. März 2022 + 29. März 2022</time>
+                </h1>
                 <h3>Standbeine des WWW</h3>
                 <ul>
                     <li>
@@ -54,35 +60,132 @@
                         (z.B. HTML)
                     </li>
                 </ul>
-                <h3><abbr title="What You See Is What You Get">WYSIWYG</abbr>-Editoren</h3>
-                <p>integrieren neben der Möglichkeit, den Quelltext direkt zu editieren, eine graphische Ausgabe/Editor.</p>
+                <h3>
+                    <abbr title="What You See Is What You Get">WYSIWYG</abbr
+                    >-Editoren
+                </h3>
+                <p>
+                    integrieren neben der Möglichkeit, den Quelltext direkt zu
+                    editieren, eine graphische Ausgabe/Editor.
+                </p>
                 <h3>Serversysteme</h3>
                 <ul>
                     <li>LAMP: Linux, Apache, MySQL, PHP</li>
                     <li>WAMP: Windows, Apache, MySQL, PHP</li>
-                    <li>XAMPP: Betriebssystem X, Apache, MySQL, PHP, Perl/Python</li>
+                    <li>
+                        XAMPP: Betriebssystem X, Apache, MySQL, PHP, Perl/Python
+                    </li>
                     <li>LEMP: Linux, NGINX, MySQL, PHP</li>
                     <li>MEAN: MongoDB, ExpressJS, Angular, NodeJS</li>
                 </ul>
-                
             </section>
 
             <section id="vl2">
-                <h1 class="no-margin">Webanwendung <time class="datum">29. März 2022</time></h1>
+                <h1 class="no-margin">
+                    Webanwendung
+                    <time class="datum">29. März 2022 + 5. April 2022</time>
+                </h1>
                 <h3>URI: Uniform Ressource Identifier</h3>
-                <p>fasst <abbr title="Uniform Ressource Locator">URL</abbr> und <abbr title="Uniform Ressource Naming">URN</abbr> zusammen.</p>
-                <p><strong>IRI:</strong> International Ressource Indentifier, verwendet Unicode.</p>
+                <p>
+                    fasst <abbr title="Uniform Ressource Locator">URL</abbr> und
+                    <abbr title="Uniform Ressource Naming">URN</abbr> zusammen.
+                </p>
+                <p>
+                    <strong>IRI:</strong> International Ressource Indentifier,
+                    verwendet Unicode.
+                </p>
+
+                <h3>(Erster) Browser-Krieg <small>1995 - 1998</small></h3>
+                <p>Microsoft vs. Netscape. Ausgelöst durch eCommerce.</p>
+                <p>
+                    Microsoft droht seine Vormachtstellung gegen Netscape und
+                    Java zu verlieren. Am Ende siegt jedoch Microsoft, da sie
+                    sich nicht an die vereinbarten Standards hielten, und
+                    Netscape wurde aufgegeben und wird OpenSpurce. Daraus
+                    entsteht Mozilla Firefox.
+                </p>
+                <p>
+                    Im Jahr 2005 nimmt Firefox dann dem Internet Explorer
+                    Marktanteile und weg und wird beliebtester Browser.
+                </p>
+                <h3>
+                    Gerichtsbeschluss gegen Microsoft <small>2009 - 2014</small>
+                </h3>
+                <p>
+                    EU schränkt Verankerung des Internet Explorers in Microsoft
+                    Windows durch Gerichtsbeschluss ein lässt den Nutzer selbst
+                    unter BrowserChoice.eu seinen Browser wählen.
+                </p>
+
                 <h3>Webserver</h3>
                 <ul>
                     <li>Apache Webserver</li>
-                    <li>nginx <small class="red">ist nicht von Google!</small></li>
-                    <li>Microsoft IIS</li>
+                    <li>
+                        nginx <small class="red">ist nicht von Google!</small>
+                    </li>
+                    <li>Microsoft IIS (Internet Information Server)</li>
                     <li>Apache Tomcat</li>
                 </ul>
+                <h3>HTTP 1.1</h3>
+                <p>Request-Header | Response-Header</p>
+                <p>
+                    beinhalten Steuerinformationen, die Browser und Webserver
+                    miteinander austauschen.
+                </p>
+                <p>Request-Header</p>
+                <ul>
+                    <li>
+                        <strong>Cache-Control</strong>: Zwischenspeichern der
+                        Daten (für eine bestimmte Zeit) auf Proxy
+                    </li>
+                    <li><strong>Host</strong>: www.hof-university.de \r \n</li>
+                    <li>
+                        <strong>Content-Negotiation</strong>: Request- |
+                        Accept-Header
+                        <ul>
+                            <li>charset / Zeichensatz (Unicode)</li>
+                            <li>encoding / gewählte Codierung (ASCII)</li>
+                            <li>
+                                compression / Möglichkeit, Daten zu komprimieren
+                            </li>
+                            <li>language / Sprache (de)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Response-Header</p>
+                <ul>
+                    <li>
+                        <strong>Expires</strong>: gibt an, wann die Seite durch
+                        den Browser neu angefordert werden muss
+                    </li>
+                    <li>
+                        <strong>Location</strong>: gibt an, wohin der Inhalt
+                        verschoben wurde
+                    </li>
+                    <li><strong>Accept-Ranges</strong>:</li>
+                    <li>
+                        <strong>Allow</strong>: Server gibt dem Browser an, was
+                        er alles kann
+                    </li>
+                    <li><strong>Server</strong>: Server stellt sich vor</li>
+                </ul>
+                <dl>
+                    <dt>HTTP-Content (Body)</dt>
+                    <dd>
+                        Daten, die vom Anwender geschickt oder betrachtet
+                        werden.
+                    </dd>
+                </dl>
             </section>
         </main>
+
         <footer>
-            <a href="https://github.com/riedadr/web-dev" target="_blank" rel="noreferrer"><img src="icons/github-brands.svg" alt="github"></a>
+            <a
+                href="https://github.com/riedadr/web-dev"
+                target="_blank"
+                rel="noreferrer"
+                ><img src="icons/github-brands.svg" alt="github"
+            /></a>
             <a href="mailto:adrian.riedel@hof-university.de">Adrian Riedel</a>
         </footer>
         <script src="index.js"></script>
