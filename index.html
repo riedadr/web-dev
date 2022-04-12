@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="prism/prism.css" />
+        
         <title>Vorlesungen</title>
     </head>
     <body>
@@ -39,6 +41,12 @@
                                 >
                             </button>
                         </li>
+                        <li>
+                            <button onclick="scrollToSection('vl3')">
+                                <h2>HTML, CSS, JS</h2>
+                                <time class="datum">12. April 2022</time>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -48,7 +56,7 @@
                     Einführung
                     <time class="datum">22. März 2022 + 29. März 2022</time>
                 </h1>
-                <h3>Standbeine des WWW</h3>
+                <h2>Standbeine des WWW</h2>
                 <ul>
                     <li>
                         Einheitliches Schema für das Auffinden von Ressourcen
@@ -60,15 +68,15 @@
                         (z.B. HTML)
                     </li>
                 </ul>
-                <h3>
+                <h2>
                     <abbr title="What You See Is What You Get">WYSIWYG</abbr
                     >-Editoren
-                </h3>
+                </h2>
                 <p>
                     integrieren neben der Möglichkeit, den Quelltext direkt zu
                     editieren, eine graphische Ausgabe/Editor.
                 </p>
-                <h3>Serversysteme</h3>
+                <h2>Serversysteme</h2>
                 <ul>
                     <li>LAMP: Linux, Apache, MySQL, PHP</li>
                     <li>WAMP: Windows, Apache, MySQL, PHP</li>
@@ -85,7 +93,7 @@
                     Webanwendung
                     <time class="datum">29. März 2022 + 5. April 2022</time>
                 </h1>
-                <h3>URI: Uniform Ressource Identifier</h3>
+                <h2>URI: Uniform Ressource Identifier</h2>
                 <p>
                     fasst <abbr title="Uniform Ressource Locator">URL</abbr> und
                     <abbr title="Uniform Ressource Naming">URN</abbr> zusammen.
@@ -95,7 +103,7 @@
                     verwendet Unicode.
                 </p>
 
-                <h3>(Erster) Browser-Krieg <small>1995 - 1998</small></h3>
+                <h2>(Erster) Browser-Krieg <small>1995 - 1998</small></h2>
                 <p>Microsoft vs. Netscape. Ausgelöst durch eCommerce.</p>
                 <p>
                     Microsoft droht seine Vormachtstellung gegen Netscape und
@@ -108,16 +116,16 @@
                     Im Jahr 2005 nimmt Firefox dann dem Internet Explorer
                     Marktanteile und weg und wird beliebtester Browser.
                 </p>
-                <h3>
+                <h2>
                     Gerichtsbeschluss gegen Microsoft <small>2009 - 2014</small>
-                </h3>
+                </h2>
                 <p>
                     EU schränkt Verankerung des Internet Explorers in Microsoft
                     Windows durch Gerichtsbeschluss ein lässt den Nutzer selbst
                     unter BrowserChoice.eu seinen Browser wählen.
                 </p>
 
-                <h3>Webserver</h3>
+                <h2>Webserver</h2>
                 <ul>
                     <li>Apache Webserver</li>
                     <li>
@@ -126,7 +134,7 @@
                     <li>Microsoft IIS (Internet Information Server)</li>
                     <li>Apache Tomcat</li>
                 </ul>
-                <h3>HTTP 1.1</h3>
+                <h2>HTTP 1.1</h2>
                 <p>Request-Header | Response-Header</p>
                 <p>
                     beinhalten Steuerinformationen, die Browser und Webserver
@@ -177,6 +185,92 @@
                     </dd>
                 </dl>
             </section>
+            <section id="vl3">
+                <h1 class="no-margin">
+                    HTML, CSS, JS
+                    <time class="datum">12. April 2022</time>
+                </h1>
+                <h2>Entwicklung von HTML</h2>
+                <p>
+                    Der darstellbare Inhalt war stark von der Internetbandbreite
+                    anhängig. So wurde das Tag zum Einbinden von Bildern erst
+                    entwickelt, als das Internet schnell genug war, um diese
+                    auch darzustellen.
+                </p>
+                <p>
+                    XML benötigt zu jedem öffnenden Tag stets auch ein
+                    schließendes Tag, um das Dokument parsen zu können. Browser
+                    sind da bei HTML toleranter.
+                </p>
+                <h2>
+                    Dokumenttypen
+                    <a
+                        href="https://www.w3.org/QA/2002/04/valid-dtd-list.html"
+                        target="_blank"
+                        rel="noreferrer"
+                        >(<abbr title="Document Type Definition">DTD</abbr>)</a
+                    >
+                </h2>
+                <p>
+                    <span class="block">
+
+                        &lt;!DOCTYPE math PUBLIC
+                        <mark>"-//W3C//DTD MathML 2.0//EN"</mark> <br />
+                        "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd"&gt;
+                    </span>
+                    <dl>
+                        <dt>FPI</dt>
+                        <dd>Formal Public Identifier</dd>
+                    </dl>
+                </p>
+                <h2>Bestandteile eines HTML-Dokuments</h2>
+                <p>
+                    <pre class="block"><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        <em>Hier kommen die Meta-Daten rein</em>
+
+        &lt;meta charset="utf-8" /&gt;
+        &lt;meta name="author" content="riedadr" /&gt;
+        &lt;meta name="description" content="Eine tolle Webseite" /&gt;
+        &lt;meta name="keywords" content="html 5, css 3, javascript" /&gt;
+        &lt;meta name="lecture" content="Web-Dev I" /&gt;
+        &lt;meta http-equiv="cache-control" content="private; no-cache" /&gt;
+
+        &lt;link rel="stylesheet" href="link/zu/.css" /&gt;
+
+        &lt;style type="text/css&gt;
+           &lt;/style&gt;
+        &lt;script type="text/javascript&gt;
+           &lt;/script&gt;
+        
+        &lt;title&gt;Titel im Tab&lt;/&gt;
+
+        &lt;base href="https://foo.bar" /&gt;
+        <em>alle relativen Links beginnen mit diesem Wert</em>
+    &lt;/head&gt;
+    &lt;body&gt;
+        <em>Hier kommt der Seiten-Inhalt rein</em>
+
+        &lt;h1&gt;Wilkommen&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </p>
+                <h2>XML-Parser</h2>
+                <p>
+                    <span class="block">
+                        &lt;<mark>?xml</mark> charset="utf8" version="1.0"&gt;
+                    </span>
+                    <dl>
+                        <dt>Processing Instruction</dt>
+                        <dd>Verwende XML-Processor (sog. XML-Parser)</dd>
+                    </dl>
+                </p>
+                <h2>Body</h2>
+                <p>
+                    enthält den sichtbaren Seiteninhalt.
+                </p>
+
+            </section>
         </main>
 
         <footer>
@@ -189,5 +283,6 @@
             <a href="mailto:adrian.riedel@hof-university.de">Adrian Riedel</a>
         </footer>
         <script src="index.js"></script>
+        <script src="prism/prism.js"></script>
     </body>
 </html>
