@@ -142,6 +142,7 @@ section .block {
   background-color: var(--fg) !important;
   padding: 0.5rem !important;
   border-radius: 0.25rem !important;
+  word-break: break-all;
 }
 
 footer {
@@ -259,6 +260,33 @@ h4,
 h5,
 h6 {
   margin-bottom: 0;
+}
+
+#box-model div {
+  padding: 1rem;
+  padding-top: 0rem;
+  min-height: 50px;
+  width: 100%;
+}
+
+#box-model div p {
+  font-size: 1rem;
+}
+
+#box-model #margin {
+  background-color: var(--orange);
+}
+
+#box-model #border {
+  background-color: var(--yellow);
+}
+
+#box-model #padding {
+  background-color: var(--green);
+}
+
+#box-model #content {
+  background-color: var(--blue);
 }
 
 @media screen and (max-width: 600px) {

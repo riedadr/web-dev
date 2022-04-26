@@ -147,6 +147,7 @@ section {
         background-color: var(--fg) !important;
         padding: 0.5rem !important;
         border-radius: 0.25rem !important;
+        word-break: break-all;
     }
 }
 
@@ -225,7 +226,6 @@ footer img {
     margin: 0;
 }
 
-
 .blue {
     color: var(--blue);
 }
@@ -263,6 +263,30 @@ h6 {
     margin-bottom: 0;
 }
 
+#box-model {
+    div {
+        padding: 1rem;
+        padding-top: 0rem;
+        min-height: 50px;
+        width: 100%;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+    #margin {
+        background-color: var(--orange);
+    }
+    #border {
+        background-color: var(--yellow)
+    }
+    #padding {
+        background-color: var(--green);
+    }
+    #content {
+        background-color: var(--blue);
+    }
+}
 
 @media screen and (max-width: 600px) {
     section {

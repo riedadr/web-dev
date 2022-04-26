@@ -7,7 +7,7 @@
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="index.css" />
         <link rel="stylesheet" href="prism/prism.css" />
-        
+
         <title>Vorlesungen</title>
     </head>
     <body>
@@ -43,8 +43,22 @@
                         </li>
                         <li>
                             <button onclick="scrollToSection('vl3')">
-                                <h2>HTML, CSS, JS</h2>
-                                <time class="datum">12. April 2022</time>
+                                <h2>HTML</h2>
+                                <time class="datum"
+                                    >12. April 2022 + 19. April 2022</time
+                                >
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="scrollToSection('testat2')">
+                                <h2>Testat 2</h2>
+                                <time class="datum">26. April 2022</time>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="scrollToSection('vl4')">
+                                <h2>CSS</h2>
+                                <time class="datum">26. April 2022</time>
                             </button>
                         </li>
                     </ul>
@@ -187,8 +201,8 @@
             </section>
             <section id="vl3">
                 <h1 class="no-margin">
-                    HTML, CSS, JS
-                    <time class="datum">12. April 2022</time>
+                    HTML <small>(Hypertext Markup Language</small>
+                    <time class="datum">12. April 2022 + 19. April 2022</time>
                 </h1>
                 <h2>Entwicklung von HTML</h2>
                 <p>
@@ -211,21 +225,17 @@
                         >(<abbr title="Document Type Definition">DTD</abbr>)</a
                     >
                 </h2>
-                <p>
-                    <span class="block">
-
-                        &lt;!DOCTYPE math PUBLIC
-                        <mark>"-//W3C//DTD MathML 2.0//EN"</mark> <br />
-                        "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd"&gt;
-                    </span>
-                    <dl>
-                        <dt>FPI</dt>
-                        <dd>Formal Public Identifier</dd>
-                    </dl>
-                </p>
+                <span class="block">
+                    &lt;!DOCTYPE math PUBLIC
+                    <mark>"-//W3C//DTD MathML 2.0//EN"</mark> <br />
+                    "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd"&gt;
+                </span>
+                <dl>
+                    <dt>FPI</dt>
+                    <dd>Formal Public Identifier</dd>
+                </dl>
                 <h2>Bestandteile eines HTML-Dokuments</h2>
-                <p>
-                    <pre class="block"><code class="language-html">&lt;html&gt;
+                <pre class="block"><code class="language-html">&lt;html&gt;
     &lt;head&gt;
         <em>Hier kommen die Meta-Daten rein</em>
 
@@ -254,22 +264,90 @@
         &lt;h1&gt;Wilkommen&lt;/h1&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                </p>
                 <h2>XML-Parser</h2>
-                <p>
-                    <span class="block">
-                        &lt;<mark>?xml</mark> charset="utf8" version="1.0"&gt;
-                    </span>
-                    <dl>
-                        <dt>Processing Instruction</dt>
-                        <dd>Verwende XML-Processor (sog. XML-Parser)</dd>
-                    </dl>
-                </p>
+                <span class="block">
+                    &lt;<mark>?xml</mark> charset="utf8" version="1.0"&gt;
+                </span>
+                <dl>
+                    <dt>Processing Instruction</dt>
+                    <dd>Verwende XML-Processor (sog. XML-Parser)</dd>
+                </dl>
                 <h2>Body</h2>
+                <p>enthält den sichtbaren Seiteninhalt.</p>
+            </section>
+            <section id="testat2">
+                <h1>
+                    Testat 2
+                    <time class="datum">26. April 2022</time>
+                </h1>
                 <p>
-                    enthält den sichtbaren Seiteninhalt.
+                    Gruppenarbeit mit 2 - 3 Mitgliedern. Einteilung bis 3. Mai
+                    abgeben. Arbeiten mit GitHub (oder Ähnlichem).
                 </p>
-
+                <h2>Themen-Auswahl</h2>
+                <ul>
+                    <li>Umfrage zu selbstgewählten Thema (mit Auswertung)</li>
+                    <li>Speedtest? (mit Ranking)</li>
+                    <li>Meme-Generator (mit Galerie)</li>
+                    <li><em>Auch eigenes Theme möglich</em></li>
+                </ul>
+                <p>zu verwenden:</p>
+                <ul>
+                    <li>HTML + CSS + JS</li>
+                    <li>PHP + DB (MySQL)</li>
+                </ul>
+            </section>
+            <section id="vl4">
+                <h1 class="no-margin">
+                    CSS <small>(Cascading Style Sheets)</small>
+                    <time class="datum">26. April 2022</time>
+                </h1>
+                <h2>Eigenschaften von Elementen (CSS)</h2>
+                <p>Schriftgröße</p>
+                <ul>
+                    <li>Absolut: px, medium, small, large</li>
+                    <li>Druck: cm, mm, pt, pc (pica: 12 pt)</li>
+                    <li>Relativ zu Elternelement: %, em (= 16px)</li>
+                    <li>Relativ zu Viewport: vh, vw</li>
+                </ul>
+                <p>
+                    Textfarbe
+                    <code class="block"
+                        >color: <span class="red">red</span> |
+                        <span class="yellow">yellow</span> |
+                        <span class="green">green</span> |
+                        <span class="blue">#3498db</span> |
+                        <span class="violett">rgb(155, 89, 182)</span>;</code
+                    >
+                </p>
+                <p>Anzeige/Layout (<code>display</code>)</p>
+                <ul id="display-list">
+                    <li>Inline</li>
+                    <li>Block</li>
+                    <li>Flex</li>
+                    <li>Grid</li>
+                </ul>
+                <p>Syntax</p>
+                <pre><code class="block"><span class="red">tag</span> | <span class="orange">.class</span> | <span class="blue">#id</span> (<span class="orange">:predefined</span> | <span class="orange">::pseudo</span>) {
+    attribut: wert;
+    color: <span class="red">red</span> | <span class="yellow">yellow</span> | <span class="green">green</span>;
+    border-radius: <span class="orange">0.25rem</span>;
+}</code></pre>
+                <p>CSS-Box-Model</p>
+                <div class="block" id="box-model">
+                    <div id="margin">
+                        <p class="no-margin">margin</p>
+                        <div id="border">
+                            <p class="no-margin">border</p>
+                            <div id="padding">
+                                <p class="no-margin">padding</p>
+                                <div id="content">
+                                    <p class="no-margin">content</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
